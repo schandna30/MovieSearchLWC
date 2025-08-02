@@ -1,7 +1,7 @@
 <template>
     <!--Filter Section-->
-    <div>
-        <lightning-layout horizontal-align="Center">
+    <div class="filterClass">
+        <lightning-layout horizontal-align="center">
             <!--Type-->
             <lightning-layout-item padding="around-small" size="3">
                 <lightning-combobox
@@ -53,6 +53,22 @@
 
     <!--Display Section-->
     <div>
+        <lightning-layout horizontal-align="center" multiple-rows="true">
+            <template for:each={searchResult} for:item="searchItem">
+                <lightning-layout-item 
+                key={searchResult.imdbID}
+                padding="around-small"
+                size="3"
+
+                >
+
+                </lightning-layout-item>
+        
+            </template>
+            </lightning-layout>
+        
+
+        </lightning-layout>
 
     </div>
     
