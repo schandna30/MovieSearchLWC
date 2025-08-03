@@ -4,45 +4,23 @@
         <lightning-layout horizontal-align="center">
             <!--Type-->
             <lightning-layout-item padding="around-small" size="3">
-                <lightning-combobox
-                name="type"
-                label="Type"
-                value={selectedType}
-                options={typeOptions}
-                placeholder="Enter a Type"
-                onchange={handleTypeChange}
-                ></lightning-combobox>
+                <lightning-combobox name="type" label="Type" value={selectedType} options={typeOptions}
+                    placeholder="Enter a Type" onchange={handleTypeChange}></lightning-combobox>
             </lightning-layout-item>
             <!--search Item-->
-             <lightning-layout-item padding="around-small" size="7">
-                <lightning-input
-                name="search"
-                label="Enter Search a Item"
-                type="search"
-                placeholder="Search for movie/series"
-                is-loading={loading}
-                onchange={handleTypeChange}
-                value={selectedSearch}
-
-                >
+            <lightning-layout-item padding="around-small" size="7">
+                <lightning-input name="search" label="Enter Search a Item" type="search"
+                    placeholder="Search for movie/series" is-loading={loading} onchange={handleTypeChange}
+                    value={selectedSearch}>
 
                 </lightning-input>
             </lightning-layout-item>
             <!--Page Number-->
-             <lightning-layout-item  padding="around-small" size="2">
-                <lightning-input
-                type="number"
-                label="Enter Page Number"
-                name="pagenumber"
-                onchange={handleTypeChange}
-                value={selectedPage}
-                field-level-help="Enter number b/w 1-100"
-                min="1"
-                max="100"
-                step="1"
-                message-when-range-underflow="Minimum Value is 1"
-                message-when-range-overflow="Maximum Value is 100"
-                >
+            <lightning-layout-item padding="around-small" size="2">
+                <lightning-input type="number" label="Enter Page Number" name="pagenumber" onchange={handleTypeChange}
+                    value={selectedPage} field-level-help="Enter number b/w 1-100" min="1" max="100" step="1"
+                    message-when-range-underflow="Minimum Value is 1"
+                    message-when-range-overflow="Maximum Value is 100">
 
                 </lightning-input>
             </lightning-layout-item>
@@ -52,24 +30,21 @@
 
 
     <!--Display Section-->
-    <div>
+    <template lwc:if={displaySearchResult}>
+    <div class="slds-var-m-top_large slds-scrollable_y display slds-box">
         <lightning-layout horizontal-align="center" multiple-rows="true">
             <template for:each={searchResult} for:item="searchItem">
-                <lightning-layout-item 
-                key={searchResult.imdbID}
-                padding="around-small"
-                size="3"
-
-                >
-
+                <lightning-layout-item key={searchItem.imdbID} padding="around-small" size="3">
+                    <c-movie-tile movie={searchItem}>
+                    </c-movie-tile>
                 </lightning-layout-item>
-        
+
             </template>
-            </lightning-layout>
-        
+        </lightning-layout>
+
 
         </lightning-layout>
 
     </div>
-    
+</template>
 </template>

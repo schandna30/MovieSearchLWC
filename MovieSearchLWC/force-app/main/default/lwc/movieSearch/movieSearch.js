@@ -49,5 +49,8 @@ export default class MovieSearch extends LightningElement {
             this.searchResult=data.Search
         }       
     }
+    get displaySearchResult(){
+        return this.searchResult.length>0? true :false;
+    }
 
 }
