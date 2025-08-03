@@ -9,6 +9,7 @@ export default class MovieSearch extends LightningElement {
     selectedPage="1";
     delayTimeout;
     searchResult=[];
+    selectedMovie='';
     get typeOptions(){
         return [
             {label:'None', value:'' },
@@ -51,6 +52,10 @@ export default class MovieSearch extends LightningElement {
     }
     get displaySearchResult(){
         return this.searchResult.length>0? true :false;
+    }
+    movieSelectedHandler(event){
+        this.selectedMovie=event.detail;
+
     }
 
 }

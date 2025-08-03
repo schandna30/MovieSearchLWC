@@ -35,7 +35,10 @@
         <lightning-layout horizontal-align="center" multiple-rows="true">
             <template for:each={searchResult} for:item="searchItem">
                 <lightning-layout-item key={searchItem.imdbID} padding="around-small" size="3">
-                    <c-movie-tile movie={searchItem}>
+                    <c-movie-tile movie={searchItem}
+                    selected-movie-id={selectedMovie}
+                    onselectedmovie={movieSelectedHandler}
+                    >
                     </c-movie-tile>
                 </lightning-layout-item>
 
