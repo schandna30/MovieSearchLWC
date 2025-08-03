@@ -36,7 +36,7 @@ The app fetches real-time results using the **IMDB API** and displays relevant m
 
 ## 🖼️ Screenshot
 
-![Movie Details UI](./assets/movieapp.png)
+![Movie Details UI](./MovieSearchLWC/assets/movieapp.png)
 
 
 ---
