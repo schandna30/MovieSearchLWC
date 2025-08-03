@@ -36,7 +36,7 @@ The app fetches real-time results using the **IMDB API** and displays relevant m
 
 ## 🖼️ Screenshot
 
-![Movie Details UI](./assets/Screenshot 2025-08-03 172638.png)
+![Movie Details UI](./assets/movie.png)
 
 
 ---
