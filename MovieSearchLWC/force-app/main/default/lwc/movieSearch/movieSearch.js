@@ -1,4 +1,6 @@
-import { LightningElement } from 'lwc';
+import { LightningElement,wire } from 'lwc';
+import { publish, MessageContext } from 'lightning/messageService';
+import MOVIECHANNEL from '@salesforce/messageChannel/movie__c';
 const DELAY=400;
 
 export default class MovieSearch extends LightningElement {
@@ -10,6 +12,8 @@ export default class MovieSearch extends LightningElement {
     delayTimeout;
     searchResult=[];
     selectedMovie='';
+     @wire(MessageContext)
+    messageContext;
     get typeOptions(){
         return [
             {label:'None', value:'' },
@@ -55,6 +59,9 @@ export default class MovieSearch extends LightningElement {
     }
     movieSelectedHandler(event){
         this.selectedMovie=event.detail;
+        const payload = { movieId:this.selectedMovie };
+
+        publish(this.messageContext, MOVIECHANNEL, payload);
 
     }
 

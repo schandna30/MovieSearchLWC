@@ -1,0 +1,38 @@
+.movie-poster img{
+    max-width: 300px;
+    border-radius:5px;
+    border: 4px solid white;
+    width: 200px;
+}
+.container{
+    background-color: #171717;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+.movieTitle{
+    font-size: 2rem;
+    color: coral;
+    text-align: center;
+
+}
+.movie-info {
+  text-align: left;
+  color: white;
+  font-size: xx-small;
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+    overflow-wrap: break-word;
+}
+b{
+    color: coral;
+    font-style:italic;
+}
+p{
+    font-size:large;
+}
+.plot{
+    margin-left:0;
+    max-width:400px;
+}
