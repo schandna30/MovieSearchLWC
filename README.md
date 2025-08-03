@@ -36,8 +36,8 @@ The app fetches real-time results using the **IMDB API** and displays relevant m
 
 ## 🖼️ Screenshot
 
-![Movie Details UI](<img width="1886" height="807" alt="image" src="https://github.com/user-attachments/assets/8e414f64-d9a6-4730-ab7b-ff1cf3c7770b" />
-)
+![Movie Details UI](./assets/movie.png)
+
 
 ---
 
